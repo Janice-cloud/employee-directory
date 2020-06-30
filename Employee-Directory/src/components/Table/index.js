@@ -6,7 +6,7 @@ function Table(props) {
         <table class="table">
         <thead>
           <tr>
-            <th>Firstname</th>
+            <th onClick={() => sortFunc("name")}><Button>First Name</Button></th>
             <th>Lastname</th>
             <th>Gender</th>
             <th>Email</th>
