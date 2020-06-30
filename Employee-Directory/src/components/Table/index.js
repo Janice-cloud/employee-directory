@@ -1,8 +1,10 @@
 import React from "react";
+import Data from "../../utils/MOCK_DATA.json"
+import Row from "../Row";
 
 function Table(props) {
     return (
-        <table class="table">
+        <table className="table">
         <thead>
           <tr>
             <th>First Name</th>
@@ -13,17 +15,28 @@ function Table(props) {
             <th>Country</th>
             <th>Department</th>
           </tr>
+
         </thead>
-        <tbody>
-          <tr>
-            <td>{props.first_name}</td>
-            <td>{props.last_name}</td>
-            <td>{props.gender}</td>
-            <td>{props.email}</td>
-            <td>{props.phone}</td>
-            <td>{props.department}</td>
-          </tr>
-        </tbody>
+          {Data.map( item => (
+            <Row 
+            key={item.id}
+            first_name = {item.first_name} 
+            last_name = {item.last_name}
+            gender = {item.gender}
+            email = {item.email}
+            phone = {item.phone_number}
+            country = {item.country}
+            department = {item.department}
+            >
+          
+             </Row>
+
+          ))}
+         
+      
+        
+        
+       
       </table>
 
     );
