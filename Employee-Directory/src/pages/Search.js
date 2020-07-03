@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import EmployeeData from "../utils/MOCK_DATA.json"
 import Container from "../components/Container";
 import Table from "../components/Table";
 
@@ -14,6 +13,21 @@ class Search extends Component {
 
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   
+//   componentDidMount() 
+// {
+//         fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json())
+//             .then((data) => {
+//                 data.sort(function (a, b) {
+//                     return a.userId> b.userId;
+//                 })
+//                 data.sort();
+//                 this.setState({data: data});
+
+//             });
+
+//     }
+
+
 
   render() {
     return (
